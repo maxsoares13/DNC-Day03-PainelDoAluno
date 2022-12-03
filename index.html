@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Aluno</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script>
+
+    function calculaMedia(){
+        let n1 = document.getElementById("nota1").value
+        let n2 = document.getElementById("nota2").value
+        let media = (eval(n1) + eval(n2)) / 2
+
+        window.location.href ="resultado.html?media="+media;
+    }
+    </script>
+</head>
+<body>
+
+    <h1 id="titulo">
+        Painel do Aluno 
+        <img src="./assets/lapis.png" alt="Lápis" />
+    </h1>
+    
+    <div id="formulario">        
+            <p>Digite a primeira nota do aluno:</p>
+            <input type="number" id="nota1" placeholder="Primeira Nota">
+            <p>Digite a segunda nota do aluno:</p>
+            <input type="number" id="nota2" placeholder="Segunda Nota">
+            <button onclick="calculaMedia()"> Calcular </button>
+    </div>
+
+
+
+
+</body>
+</html>
